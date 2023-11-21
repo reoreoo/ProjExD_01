@@ -18,11 +18,16 @@ def main():
         
         
         screen.blit(bg_img, [0, 0])
-        screen.blit(bg_img2,[800,250])
+        if tmr%2==0:
+            screen.blit(lst[0],[800,250])
+        else:
+            screen.blit(lst[1],[800,250])
+
+        
         
         pg.display.update()
         tmr += 1        
-        clock.tick(10)
+        clock.tick(100)
 
 
 if __name__ == "__main__":
